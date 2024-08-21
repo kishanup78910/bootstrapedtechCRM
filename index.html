@@ -69,30 +69,71 @@
         }
     
        
-        #pricing {
-            background-color: #f1f3f5; 
-        }
-    
-        .pricing-card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-        }
-    
-        .pricing-card .card-title {
-            color: #007bff;
-            font-weight: bold;
-        }
-    
-        .pricing-card .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-    
-        .pricing-card .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #004494;
-        }
+     /* General styling for the section */
+#pricing {
+    background-color: #f0f0f0;
+}
+
+.card {
+    border: 2px solid #007bff;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #e2e2e2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.card ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.card li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+}
+
     
         #contact {
             background-color: #ffffff;
@@ -258,7 +299,7 @@
     <section class="hero-section">
         <div class="container">
             <h1 class="display-4">Welcome to EdTech CRM</h1>
-            <p class="lead">The ultimate CRM solution for educational institutions to manage students, communication, and more.</p>
+            <p class="lead">The ultimate CRM solution for educational institutions to manage students, communication, and more. </p>
             <a href="#features" class="btn btn-light btn-lg">Learn More</a>
         </div>
     </section>
@@ -341,6 +382,7 @@
             </div>
         </div>
     </section>
+    
 
 <section id="reviews" class="py-5">
     <div class="container">
@@ -404,7 +446,7 @@
                                  class="rounded-circle review-image" alt="Emily Johnson">
                         </div>
                         <p class="card-text">"The analytics feature is a game-changer for us. We can now track student
-                            performance more efficiently and make data-driven decisions."</p>
+                            performance more efficiently and make data-driven decisions. Highly recommednded for online"</p>
                         <div class="d-flex justify-content-between align-items-center mt-4">
                             <div class="review-author">
                                 <h6 class="mb-0">Emily Johnson</h6>
