@@ -17,18 +17,68 @@
             background-color: #f5f7fa; /* Light grey background */
         }
     
-        .navbar-light .navbar-brand {
-            color: #007bff;
-            font-weight: bold;
-        }
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.5rem 1rem; 
+}
+
+
+.navbar-brand {
+    font-size: 1.75rem; 
+    color: #333333;
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff; 
+}
+
+
+.navbar-toggler {
+    border: none; 
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); 
+}
+
+
+.navbar-nav .nav-link {
+    color: #555555; 
+    font-size: 1rem;
+    font-weight: 500; 
+    padding: 0.5rem 1rem; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; 
+    background-color: rgba(0, 123, 255, 0.1); 
+    border-radius: 0.25rem;}
+
+.navbar-nav .nav-link.active {
+    color: #007bff; 
+    font-weight: 600; 
+}
+
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
     
-        .navbar-light .navbar-nav .nav-link {
-            color: #555;
-        }
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
     
-        .navbar-light .navbar-nav .nav-link:hover {
-            color: #007bff;
-        }
+    .navbar-nav .nav-link {
+        padding: 0.75rem; 
+    }
+}
+
     
         .hero-section {
             background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); 
@@ -211,12 +261,100 @@
             transform: scale(1.1);
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
         }
+       
+.modal-content {
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: none; 
+    padding: 1rem; 
+}
+
+
+.modal-header {
+    border-bottom: none; 
+    padding-bottom: 1rem; 
+    background-color: #f8f9fa; 
+    border-radius: 10px 10px 0 0; 
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600; 
+}
+
+.btn-close {
+    filter: invert(0.5);
+    transition: filter 0.3s ease;
+}
+
+.btn-close:hover {
+    filter: invert(0.3);
+}
+
+
+.modal-body {
+    padding: 2rem; 
+    background-color: #ffffff; 
+}
+
+
+.form-label {
+    font-weight: 500; 
+    color: #555;
+}
+
+.form-control {
+    border-radius: 5px; 
+    border: 1px solid #ced4da; 
+    padding: 0.75rem 1rem; 
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); 
+}
+
+.btn-primary {
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 0.75rem 1.5rem; 
+    font-size: 1rem; 
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); 
+}
+
+.btn-primary:focus, .btn-primary:active {
+    box-shadow: none; 
+}
+
+@media (max-width: 767px) {
+    .modal-dialog {
+        margin: 1rem; 
+    }
+
+    .modal-body {
+        padding: 1rem; 
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
     </style>
     
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">EdTech CRM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -243,6 +381,8 @@
             </div>
         </div>
     </nav>
+    
+    
 
     <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -267,7 +407,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -295,7 +435,7 @@
             </div>
         </div>
     </div>
-
+    
     <section class="hero-section">
         <div class="container">
             <h1 class="display-4">Welcome to EdTech CRM</h1>
