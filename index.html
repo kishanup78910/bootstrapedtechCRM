@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech CRM Software</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f7fa; /* Light grey background */
+        }
+    
+        .navbar-light .navbar-brand {
+            color: #007bff;
+            font-weight: bold;
+        }
+    
+        .navbar-light .navbar-nav .nav-link {
+            color: #555;
+        }
+    
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+    
+        .hero-section {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); 
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .hero-section .btn-light {
+            color: #007bff;
+            background-color: white;
+            border-color: white;
+        }
+    
+        .hero-section .btn-light:hover {
+            color: white;
+            background-color: #0056b3;
+            border-color: #004494;
+        }
+    
+     
+        #features {
+            background-color: #ffffff; 
+        }
+    
+        .feature-icon {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+    
+        .feature-icon:hover {
+            color: #0056b3;
+        }
+    
+       
+        #pricing {
+            background-color: #f1f3f5; 
+        }
+    
+        .pricing-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+    
+        .pricing-card .card-title {
+            color: #007bff;
+            font-weight: bold;
+        }
+    
+        .pricing-card .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    
+        .pricing-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004494;
+        }
+    
+        #contact {
+            background-color: #ffffff;
+        }
+    
+        #contact .form-label {
+            font-weight: bold;
+        }
+    
+        #contact .form-control {
+            border-radius: 0.25rem;
+            border: 2px solid #007bff;
+        }
+    
+        #contact .form-control:focus {
+            border-color: #0056b3;
+            box-shadow: none;
+        }
+    
+        #contact .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    
+        #contact .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004494;
+        }
+    
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+    
+        .review-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .review-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+    
+        .review-img img {
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+            border: 3px solid #f8f9fa;
+        }
+    
+        .review-card:hover .review-img img {
+            transform: scale(1.1);
+            border: 3px solid #007bff;
+        }
+    
+        .review-rating i {
+            font-size: 1.2rem;
+        }
+    
+        #reviews h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    
+        .review-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .review-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">EdTech CRM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signinEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signinEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signinPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signinPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signupConfirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">Welcome to EdTech CRM</h1>
+            <p class="lead">The ultimate CRM solution for educational institutions to manage students, communication, and more.</p>
+            <a href="#features" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h4>Student Management</h4>
+                    <p>Manage student data efficiently with our powerful tools.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h4>Analytics & Reporting</h4>
+                    <p>Get detailed insights and reports to make informed decisions.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <h4>Communication Tools</h4>
+                    <p>Seamless communication with students, parents, and staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="text-center py-5">
+        <div class="container">
+            <h2 class="mb-5">Pricing</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Basic Plan</h5>
+                            <p class="card-text">$19.99 / month</p>
+                            <ul class="list-unstyled">
+                                <li>10 GB Storage</li>
+                                <li>1000 Students</li>
+                                <li>Email Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pro Plan</h5>
+                            <p class="card-text">$49.99 / month</p>
+                            <ul class="list-unstyled">
+                                <li>50 GB Storage</li>
+                                <li>5000 Students</li>
+                                <li>Priority Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Enterprise Plan</h5>
+                            <p class="card-text">Contact us for pricing</p>
+                            <ul class="list-unstyled">
+                                <li>Unlimited Storage</li>
+                                <li>Unlimited Students</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="reviews" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card review-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="review-img text-center mb-3">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/029/796/026/small_2x/asian-girl-anime-avatar-ai-art-photo.jpg"
+                                 class="rounded-circle review-image" alt="John Doe">
+                        </div>
+                        <p class="card-text">"This software has completely transformed the way we manage our student
+                            data. The interface is user-friendly, and the support team is  ready to help!"</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div class="review-author">
+                                <h6 class="mb-0">John Doe</h6>
+                                <small>Principal, ABC School</small>
+                            </div>
+                            <div class="review-rating text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card review-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="review-img text-center mb-3">
+                            <img src="https://thumbs.dreamstime.com/b/d-icon-avatar-business-woman-illustration-smiling-happy-girl-cartoon-close-up-portrait-standing-teenager-isolated-277029066.jpg"
+                                 class="rounded-circle review-image" alt="Jane Smith">
+                        </div>
+                        <p class="card-text">"We've seen a significant improvement in our communication with parents
+                            thanks to this CRM. Highly recommended for all educational institutions!"</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div class="review-author">
+                                <h6 class="mb-0">Jane Smith</h6>
+                                <small>Director, XYZ Academy</small>
+                            </div>
+                            <div class="review-rating text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card review-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="review-img text-center mb-3">
+                            <img src="https://img.freepik.com/free-photo/young-business-woman-3d-illustration-cartoon-character-isolated-white-background_1142-56515.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723334400&semt=ais_hybrid"
+                                 class="rounded-circle review-image" alt="Emily Johnson">
+                        </div>
+                        <p class="card-text">"The analytics feature is a game-changer for us. We can now track student
+                            performance more efficiently and make data-driven decisions."</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div class="review-author">
+                                <h6 class="mb-0">Emily Johnson</h6>
+                                <small>Head of Department, LMN School</small>
+                            </div>
+                            <div class="review-rating text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section id="faq" class="faq-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is EdTech CRM?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        EdTech CRM is a comprehensive customer relationship management software designed specifically for educational institutions to manage student data, communication, and more.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How can I contact support?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can contact our support team via the "Contact" section on our website or by emailing support@edtechcrm.com. Our support team is available 24/7 to assist you with any queries.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What features does EdTech CRM offer?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our CRM offers a range of features including student management, analytics & reporting, communication tools, and more. For a detailed list of features, please visit the "Features" section of our website.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How can I request a demo?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        To request a demo, please fill out the form in the "Contact" section of our website or reach out to us at demo@edtechcrm.com. We'll get back to you to schedule a convenient time for the demo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@edtechcrm.com</p>
+                    <p>Phone: 6307997224</p>
+                    <p>Address: Noida sector 62</p>
+                </div>
+    
+                
+                <div class="col-md-4 mb-3">
+                    <h5>Follow Us</h5>
+                    <a href="https://facebook.com/edtechcrm" class="me-3" style="color: #1877F2;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/edtechcrm" class="me-3" style="color: #1DA1F2;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/edtechcrm" class="me-3" style="color: #0A66C2;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/edtechcrm" style="color: #E4405F;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+    
+               
+                <div class="col-md-4 mb-3">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 EdTech CRM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+   
+</body>
+
+</html>
